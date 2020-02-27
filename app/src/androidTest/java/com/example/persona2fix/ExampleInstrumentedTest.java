@@ -1,4 +1,4 @@
-package com.example.persona2new;
+package com.example.persona2fix;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.example.persona2new", appContext.getPackageName());
+        assertEquals("com.example.persona2fix", appContext.getPackageName());
     }
 }

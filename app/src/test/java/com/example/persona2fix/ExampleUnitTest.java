@@ -1,4 +1,4 @@
-package com.example.persona2new;
+package com.example.persona2fix;
 
 import org.junit.Test;
 
