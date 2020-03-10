@@ -11,13 +11,14 @@ public class KeuanganAdapter extends RecyclerView.Adapter<KeuanganAdapter.MyView
     private List<Keuangan> keuanganList;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView uang, jenis, date;
+        public TextView uang, jenis, date, tujuan;
 
         public MyViewHolder(View view) {
             super(view);
             uang = (TextView) view.findViewById(R.id.uang);
             date = (TextView) view.findViewById(R.id.date);
             jenis = (TextView) view.findViewById(R.id.jenis);
+            tujuan=(TextView) view.findViewById(R.id.tujuan);
         }
     }
 
@@ -40,6 +41,8 @@ public class KeuanganAdapter extends RecyclerView.Adapter<KeuanganAdapter.MyView
         holder.uang.setText(keuangan.getUang());
         holder.date.setText(keuangan.getDate());
         holder.jenis.setText(keuangan.getJenis());
+        holder.tujuan.setText(keuangan.getTujuan());
+
     }
 
     @Override

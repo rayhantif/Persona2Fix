@@ -2,15 +2,16 @@ package com.example.persona2fix;
 
 public class Keuangan {
         private String uang;
-        private String date, jenis;
+        private String date, jenis, tujuan;
 
         public Keuangan() {
         }
 
-        public Keuangan(String uang, String date, String jenis) {
+        public Keuangan(String uang, String date, String jenis, String tujuan) {
             this.uang = uang;
             this.date = date;
             this.jenis = jenis;
+            this.tujuan=tujuan;
         }
 
         public String getUang() {
@@ -36,5 +37,10 @@ public class Keuangan {
         public void setJenis(String jenis) {
             this.jenis = jenis;
         }
+
+        public String getTujuan(){return tujuan;}
+
+        public void setTujuan(String tujuan){this.tujuan=tujuan;}
+
 
 }

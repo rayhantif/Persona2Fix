@@ -24,10 +24,16 @@
         android:layout_below="@id/uang" />
 
     <TextView
+        android:id="@+id/tujuan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date"/>
+
+    <TextView
         android:id="@+id/jenis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:textColor="@color/year" />
+        android:textColor="@color/title" />
 
 </RelativeLayout>

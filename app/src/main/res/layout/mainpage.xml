@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainPage">
+
+    <TextView
+        android:id="@+id/jumlah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Jumlah"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/jenis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Jenis"
+        app:layout_constraintStart_toStartOf="@+id/besar"
+        app:layout_constraintTop_toBottomOf="@+id/besar" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Date"
+        app:layout_constraintStart_toStartOf="@+id/Pengeluaran"
+        app:layout_constraintTop_toBottomOf="@+id/Pengeluaran" />
+
+    <TextView
+        android:id="@+id/tujuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Tujuan"
+        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <EditText
+        android:id="@+id/besar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/jumlah"
+        app:layout_constraintTop_toBottomOf="@+id/jumlah" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="@+id/date"
+        app:layout_constraintTop_toBottomOf="@+id/date" />
+
+    <CheckBox
+        android:id="@+id/Pengeluaran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pengeluaran"
+        app:layout_constraintStart_toStartOf="@+id/jenis"
+        app:layout_constraintTop_toBottomOf="@+id/jenis" />
+
+    <CheckBox
+        android:id="@+id/Pemasukan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pemasukan"
+        app:layout_constraintStart_toEndOf="@+id/Pengeluaran"
+        app:layout_constraintTop_toTopOf="@+id/Pengeluaran" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/tujuan"
+        app:layout_constraintTop_toBottomOf="@+id/tujuan" />
+
+    <Button
+        android:id="@+id/sumbit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Sumbit"
+        app:layout_constraintStart_toStartOf="@+id/editText3"
+        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
