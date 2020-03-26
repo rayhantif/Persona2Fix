@@ -1,7 +1,8 @@
-package com.example.persona2fix;
+package com.example.persona2fix.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -10,6 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.persona2fix.R;
 
 public class MainPage extends AppCompatActivity {
     @Override
@@ -64,5 +67,46 @@ public class MainPage extends AppCompatActivity {
 
 
 
+    }
+    @Override
+    protected void onStart(){
+        super.onStart();
+        Log.d("lifecycle","onStart invoked");
+        Toast.makeText(this, "onStart invoked", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+        Log.d("lifecycle","onResume invoked");
+        Toast.makeText(this, "onResume invoked", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        Log.d("lifecycle","onPause invoked");
+        Toast.makeText(this, "onPause invoked", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onStop(){
+        super.onStop();
+        Log.d("lifecycle","onStop invoked");
+        Toast.makeText(this, "onStop invoked", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onRestart(){
+        super.onPause();
+        Log.d("lifecycle","onRestart invoked");
+        Toast.makeText(this, "onRestart invoked", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        Log.d("lifecycle","onDestroy invoked");
+        Toast.makeText(this, "onDestroy invoked", Toast.LENGTH_SHORT).show();
     }
 }

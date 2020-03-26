@@ -1,19 +1,43 @@
-package com.example.persona2fix;
+package com.example.persona2fix.Model;
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
+@Entity(tableName = "keuangan")
 public class Keuangan {
-        private String uang;
-        private String date, jenis, tujuan;
+    @PrimaryKey(autoGenerate = true)
+    @NonNull
+    @ColumnInfo(name="_id")
+    private int _id;
+
+    @NonNull
+    @ColumnInfo(name="uang")
+    private String uang;
+
+    @NonNull
+    @ColumnInfo(name="date")
+    private String date;
+
+    @NonNull
+    @ColumnInfo(name="jenis")
+    private String jenis;
+
+    @NonNull
+    @ColumnInfo(name="tujuan")
+    private String tujuan;
 
         public Keuangan() {
         }
 
-        public Keuangan(String uang, String date, String jenis, String tujuan) {
+        public Keuangan(@NonNull String uang, @NonNull String date, @NonNull String jenis, @NonNull String tujuan) {
             this.uang = uang;
             this.date = date;
             this.jenis = jenis;
             this.tujuan=tujuan;
         }
 
+        public int get_id(){return  _id;};
         public String getUang() {
             return uang;
         }

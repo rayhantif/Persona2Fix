@@ -1,19 +1,22 @@
-package com.example.persona2fix;
+package com.example.persona2fix.Adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.persona2fix.Model.Keuangan;
+import com.example.persona2fix.R;
+
 import java.util.List;
 
 public class KeuanganAdapter extends RecyclerView.Adapter<KeuanganAdapter.MyViewHolder> {
     private List<Keuangan> keuanganList;
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView uang, jenis, date, tujuan;
-
-        public MyViewHolder(View view) {
+    class MyViewHolder extends RecyclerView.ViewHolder {
+        private TextView uang, jenis, date, tujuan;
+        private MyViewHolder(View view) {
             super(view);
             uang = (TextView) view.findViewById(R.id.uang);
             date = (TextView) view.findViewById(R.id.date);
@@ -22,11 +25,14 @@ public class KeuanganAdapter extends RecyclerView.Adapter<KeuanganAdapter.MyView
         }
     }
 
+    public void setKeuangan(List<Keuangan> words) {
+        keuanganList = words;
+        notifyDataSetChanged();
+    }
 
     public KeuanganAdapter(List<Keuangan> keuanganList) {
         this.keuanganList = keuanganList;
     }
-
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
